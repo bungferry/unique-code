@@ -1,6 +1,6 @@
 export const placeholders: string[] = [
-  'Bananas are great',
-  'Why was 6 afraid of 7?',
+  'Hello World!',
+  'Ganteng Maksimal',
   'Enter your own text here',
   'Ferry Ayunda',
   'Check me out on Facebook'
