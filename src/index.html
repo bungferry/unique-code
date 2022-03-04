@@ -7,162 +7,31 @@
     <meta property="og:image" content="../assets/banner.png">
     <link rel="stylesheet" href="main.css" />
     <style>
-    /*! nayma-tooltip.css - v1.0 - 2017-03-30
-* https://nayma.pl
-* Copyright (c) 2017 Nayma.pl
-* Release under The MIT License
-* Demo: https://codepen.io/Naymapl/pen/ryQPwG */
-
-[ntt] {
-    position: relative
+    /* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
-[ntt]::before,
-[ntt]::after {
-    text-transform: none;
-    font-size: 10px;
-    line-height: 1;
-    user-select: none;
-    pointer-events: none;
-    position: absolute;
-    display: none;
-    opacity: 0
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
 }
 
-[ntt]::before {
-    content: '';
-    border: 5px solid transparent;
-    z-index: 1000
-}
-
-[ntt]::after {
-    content: attr(ntt);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
-    font-size: 10px;
-    vertical-align: super;
-    letter-spacing: 1px;
-    text-align: center;
-    min-width: 3em;
-    max-width: 21em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: .8em 1em;
-    border-radius: 3px;
-    box-shadow: 0 1em 2em -.6em rgba(0, 0, 0, 0.35);
-    background: rgba(0, 0, 0, .9);
-    color: #fff;
-    z-index: 1000;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-}
-
-[ntt]:hover::before,
-[ntt]:hover::after {
-    display: block
-}
-
-[ntt='']::before,
-[ntt='']::after {
-    display: none!important
-}
-
-[ntt]:not([flow])::before,
-[ntt][flow^="up"]::before {
-    bottom: 100%;
-    border-bottom-width: 0;
-    border-top-color: rgba(0, 0, 0, .85);
-    margin-bottom: 5px
-}
-
-[ntt]:not([flow])::after,
-[ntt][flow^="up"]::after {
-    bottom: calc(100% + 10px)
-}
-
-[ntt]:not([flow])::before,
-[ntt]:not([flow])::after,
-[ntt][flow^="up"]::before,
-[ntt][flow^="up"]::after {
-    left: 50%;
-    transform: translate(-50%, -.6em)
-}
-
-[ntt][flow^="down"]::before {
-    top: 100%;
-    border-top-width: 0;
-    border-bottom-color: rgba(0, 0, 0, .9);
-    margin-top: 5px
-}
-
-[ntt][flow^="down"]::after {
-    top: calc(100% + 10px)
-}
-
-[ntt][flow^="down"]::before,
-[ntt][flow^="down"]::after {
-    left: 50%;
-    transform: translate(-50%, .6em)
-}
-
-[ntt][flow^="left"]::before {
-    top: 50%;
-    border-right-width: 0;
-    border-left-color: rgba(0, 0, 0, .9);
-    left: calc(0em - 10px);
-    transform: translate(-.6em, -50%)
-}
-
-[ntt][flow^="left"]::after {
-    top: 50%;
-    right: calc(100% + 10px);
-    transform: translate(-.6em, -50%)
-}
-
-[ntt][flow^="right"]::before {
-    top: 50%;
-    border-left-width: 0;
-    border-right-color: rgba(0, 0, 0, .9);
-    right: calc(0em - 10px);
-    transform: translate(.6em, -50%)
-}
-
-[ntt][flow^="right"]::after {
-    top: 50%;
-    left: calc(100% + 10px);
-    transform: translate(.6em, -50%)
-}
-
-@keyframes ntts-vert {
-    to {
-        opacity: .9;
-        transform: translate(-50%, 0)
-    }
-}
-
-@keyframes ntts-horz {
-    to {
-        opacity: .9;
-        transform: translate(0, -50%)
-    }
-}
-
-[ntt]:not([flow]):hover::before,
-[ntt]:not([flow]):hover::after,
-[ntt][flow^="up"]:hover::before,
-[ntt][flow^="up"]:hover::after,
-[ntt][flow^="down"]:hover::before,
-[ntt][flow^="down"]:hover::after {
-    animation: ntts-vert 400ms ease-out forwards
-}
-
-[ntt][flow^="left"]:hover::before,
-[ntt][flow^="left"]:hover::after,
-[ntt][flow^="right"]:hover::before,
-[ntt][flow^="right"]:hover::after {
-    animation: ntts-horz 400ms ease-out forwards
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
     </style>
     <include src="meta-pwa.html"/></include>
