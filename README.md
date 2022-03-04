@@ -4,7 +4,7 @@
 
 ## 🦋 Demo
 
-[uniquecode.now.sh](https://textgenerator.vercel.app/)
+[textgenerator.vercel.app](https://textgenerator.vercel.app/)
 
 ## Examples
 
