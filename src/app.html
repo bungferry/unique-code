@@ -59,7 +59,7 @@
 
           <div class="mt-4 flex items-center space-x-3">
             <!-- copy button -->
-            <button class="button">
+            <button class="button" onclick="myFunction()">
               <svg
                 class="w-4 h-4"
                 xmlns="http://www.w3.org/2000/svg"
@@ -75,10 +75,9 @@
                 />
               </svg>
               
-              <div class="ml-1" "w3-container"><p class="w3-tooltip">Copy <span class="w3-text w3-tag w3-red">Copied!</span></p></div>
-              
-              
-            </button>
+              <div class="ml-1" "w3-container">Copy</div>
+              <div id="snackbar">Copied!</div>
+              </button>
 
             <!-- share button -->
             <button
