@@ -14,9 +14,9 @@ export const canShare = () => {
 
 export const shareText = async (text: string) => {
   const shareData: ShareData = {
-    title: "UniqueCode",
+    title: "Text Generator",
     text: text,
-    // url: 'https://unqiquecode.now.sh'
+    // url: 'https://textgenerator.vercel.app/'
   };
 
   return await navigator.share(shareData);
